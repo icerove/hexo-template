@@ -13,9 +13,8 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://www.fangbo.org/fangbo/
-root: /fangbo/
-dir: /
+url: http://www.fangbo.org
+root: /
 permalink: :title/
 permalink_defaults:
 pretty_urls:

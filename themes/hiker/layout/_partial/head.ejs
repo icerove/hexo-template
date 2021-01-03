@@ -50,7 +50,7 @@
   %>
 
   <link rel="icon" href="<%- partial('post/urlconvert', {tempUrl: avatarurl}) %>">
-  <link rel="apple-touch-icon" href="<%= config.dir %><% if (theme.avatar.url){ %><%- theme.avatar.url %><% } else {%>css/images/avatar.jpg<% } %>">
+  <link rel="apple-touch-icon" href="<%= config.root %><% if (theme.avatar.url){ %><%- theme.avatar.url %><% } else {%>css/images/avatar.jpg<% } %>">
   <% if (config.highlight.enable){ %>
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <% } %>
@@ -58,9 +58,9 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <style type="text/css">
-    @font-face{font-family:futura-pt; src:url("<%- config.dir %>css/fonts/FuturaPTBold.otf") format("woff");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt-light; src:url("<%- config.dir %>css/fonts/FuturaPTBook.otf") format("woff");font-weight:lighter;font-style:normal;}
-    @font-face{font-family:futura-pt-italic; src:url("<%- config.dir %>css/fonts/FuturaPTBookOblique.otf") format("woff");font-weight:400;font-style:italic;}
+    @font-face{font-family:futura-pt; src:url("<%- config.root %>css/fonts/FuturaPTBold.otf") format("woff");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt-light; src:url("<%- config.root %>css/fonts/FuturaPTBook.otf") format("woff");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt-italic; src:url("<%- config.root %>css/fonts/FuturaPTBookOblique.otf") format("woff");font-weight:400;font-style:italic;}
   </style>
   <%- css('css/style') %>
 
@@ -68,10 +68,10 @@
   <%- js('js/bootstrap') %>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="<%- config.dir %>css/bootstrap.css" >
+  <link rel="stylesheet" href="<%- config.root %>css/bootstrap.css" >
 
   <% if (is_home()){ %>
-    <link rel="stylesheet" href="<%- config.dir %>css/home.css" >
+    <link rel="stylesheet" href="<%- config.root %>css/home.css" >
   <% } else {%>
     <%- css('css/dialog.css') %>
   <% } %>
@@ -81,11 +81,11 @@
   <% } %>
 
   <% if (!is_home() || !theme.home_background_image.enable){ %>
-    <link rel="stylesheet" href="<%- config.dir %>css/header-post.css" >
+    <link rel="stylesheet" href="<%- config.root %>css/header-post.css" >
   <% } %>
 
   <% if (!is_post() && !is_home()){ %>
-    <link rel="stylesheet" href="<%- config.dir %>css/archive.css" >
+    <link rel="stylesheet" href="<%- config.root %>css/archive.css" >
   <% } %>
 
 </head>
