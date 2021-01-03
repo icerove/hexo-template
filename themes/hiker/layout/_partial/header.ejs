@@ -1,0 +1,36 @@
+<header id="header">
+
+	<!-- 背景图模式 -->
+  <div id="intrologo" class="intro-logo">
+    <video id="my-video" loop="loop" muted autoplay style="width: 100%;">
+      <source src="<%- theme.home_background_image.url %>" type="video/mp4">
+    </video>
+    <div id="homelogo" class="homelogo"> 
+      <div class="homelogoback">
+        <img src="<%- theme.home_logo.url %>" class="home-logo" />
+        <h1><a href="#content" id="logo" style="color: white;"><%= config.title %></a></h1>
+      </div>
+    </div>
+  </div>
+
+ <!-- home_logo_image居中 -->
+  <script>
+      var homelogodiv = document.getElementById("homelogo");
+      if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
+        homelogodiv.style.width = document.body.clientWidth + "px";
+        homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+      } else {
+        homelogodiv.style.width = homelogodiv.clientWidth  + "px";
+        homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
+      }
+  </script>
+
+  <div class="intro-navigate">
+      <p class="navigater-list">
+        <% for (var i in theme.menu){ %>
+          <a id="beautifont" class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= __(i.toLowerCase()) %></a>
+        <% } %>
+      </p>
+  </div>
+
+</header>
